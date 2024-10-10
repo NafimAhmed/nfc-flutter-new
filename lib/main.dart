@@ -28,9 +28,9 @@ class MyAppState extends State<MyApp> {
           child: FutureBuilder<bool>(
             future: NfcManager.instance.isAvailable(),
             builder: (context, ss) =>
-            // ss.data != true
-            //     ? Center(child: Text('NfcManager.isAvailable(): ${ss.data}'))
-            //     :
+            ss.data != true
+                ? Center(child: Text('NfcManager.isAvailable(): ${ss.data}'))
+                :
             Flex(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               direction: Axis.vertical,
